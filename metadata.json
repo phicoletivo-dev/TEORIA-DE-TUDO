@@ -1,0 +1,10 @@
+{
+  "name": "Revista Visual Φ_FUD 11.9-BS/NF",
+  "description": "Revista visual e interativa da Teoria de Tudo com Bolha e Módulo Espiritual por Osmar Pontes (DOI: 10.5281/zenodo.22800694).",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

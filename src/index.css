@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-cinzel: "Cinzel", Georgia, serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #060509;
+  color: #e8e4dc;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Cosmic Glows & Accents */
+.glow-gold {
+  box-shadow: 0 0 35px -5px rgba(234, 179, 8, 0.25);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.25);
+}
+
+.glow-blue {
+  box-shadow: 0 0 35px -5px rgba(59, 130, 246, 0.25);
+}
+
+.text-gold {
+  color: #f3d178;
+}
+
+.text-cyan-glow {
+  color: #67e8f9;
+  text-shadow: 0 0 16px rgba(103, 232, 249, 0.4);
+}
+
+.text-gold-glow {
+  color: #fde047;
+  text-shadow: 0 0 16px rgba(253, 224, 71, 0.35);
+}
+
+/* Print layout for PDF export of all 16 pages */
+@media print {
+  body {
+    background: #000000 !important;
+    color: #ffffff !important;
+    overflow: visible !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    page-break-after: always !important;
+    break-after: page !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: #060509 !important;
+    color: #e8e4dc !important;
+  }
+}
+
+/* Custom scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 12, 22, 0.6);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(234, 179, 8, 0.25);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(234, 179, 8, 0.5);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+
